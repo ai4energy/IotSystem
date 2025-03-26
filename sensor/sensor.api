@@ -1,0 +1,29 @@
+syntax = "v1"
+
+type (
+	SensorDataRequest {
+		Name  string  `path:"name"`
+		Value int `json:"value"`
+	}
+	SensorDataResponse {
+		Num    int     `json:"num"`
+		Name  string  `json:"name"`
+		Value int `json:"value"`
+	}
+)
+
+service sensor-api {
+	@handler ListSensorsHandler
+	get /sensors (SensorDataResponse)
+
+	@handler CreateSensorHandler
+	post /sensors (SensorDataRequest) returns (SensorDataResponse)
+
+	@handler UpdateSensorHandler
+	put /sensors/:name (SensorDataRequest) returns (SensorDataResponse)
+
+	@handler DeleteSensorHandler
+	delete /sensors/:name
+// MQTT subscription logic will be handled in the main.go file
+}
+

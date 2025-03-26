@@ -1,3 +1,4 @@
+.gitignore
 # Logs
 logs
 *.log
@@ -128,3 +129,39 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Go related
+# Binaries for programs and plugins
+*.exe
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go module cache
+# Uncomment if you use Go modules
+**/go.sum
+**/go.mod
+
+# Object files for the Go compiler
+*.o
+
+# Archive files for static libraries
+*.a
+
+# Compiled packages and dependencies
+pkg/
+
+# Temporary Go build files
+*.out
+*.test
+
+# GoLand IDE
+.idea/
+
+# Go build cache
+# Uncomment if you use Go build cache
+# **/pkg/mod

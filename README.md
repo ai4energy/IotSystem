@@ -1,7 +1,7 @@
 # IotSystem
  
 系统架构图：
-![image](assets\架构.png)
+![image](assets/架构.png)
 
 按照以下步骤，运行项目：
 
